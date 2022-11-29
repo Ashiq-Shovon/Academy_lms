@@ -52,7 +52,7 @@ if (!function_exists('check_permission')) {
         $CI    = &get_instance();
         $CI->load->database();
 
-        if (!has_permission($permission_for)) {
+        if (!has_permission($permission_for )) {
             $CI->session->set_flashdata('error_message', get_phrase('you_are_not_authorized_to_access_this_page'));
             redirect(site_url('admin/dashboard'), 'refresh');
         }

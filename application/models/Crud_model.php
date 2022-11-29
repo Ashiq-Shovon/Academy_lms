@@ -3350,6 +3350,7 @@ class Crud_model extends CI_Model
     }
 
     function update_blog_settings(){
+        
         $data['value'] = htmlspecialchars($this->input->post('blog_page_title'));
         $this->db->where('key', 'blog_page_title');
         $this->db->update('frontend_settings', $data);
@@ -3403,6 +3404,8 @@ class Crud_model extends CI_Model
             return 'no_result';
         }
     }
+
+  
 
 
 

@@ -76,6 +76,7 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 							</ul>
 						</li>
 					<?php endif; ?>
+					
 				</ul>
 			</li>
 		<?php endif; ?>
@@ -94,6 +95,30 @@ $status_wise_courses = $this->crud_model->get_status_wise_courses();
 
 					<li class="<?php if ($page_name == 'enrol_student') echo 'active'; ?>">
 						<a href="<?php echo site_url('admin/enrol_student'); ?>"><?php echo get_phrase('enrol_a_student'); ?></a>
+					</li>
+				</ul>
+			</li>
+		<?php endif; ?>
+		
+		<?php if (addon_status('ebook')) : ?>
+			<li class="side-nav-item">
+			<a href="javascript: void(0);" class="side-nav-link <?php if ($page_name == 'enrol_history' || $page_name == 'enrol_student') : ?> active <?php endif; ?>">
+					<i class="dripicons-network-3"></i>
+					<span> <?php echo get_phrase('ebook'); ?> </span>
+					<span class="menu-arrow"></span>
+				</a>
+				<ul class="side-nav-third-level" aria-expanded="false">
+					<li class="<?php if ($page_name == 'all_ebooks') echo 'active'; ?>">
+						<a href="<?php echo site_url('ebook_manager/all_ebooks'); ?>"><?php echo get_phrase('all_ebooks'); ?></a>
+					</li>
+					<li class="<?php if ($page_name == 'add_ebook') echo 'active'; ?>">
+						<a href="<?php echo site_url('ebook_manager/add_ebook'); ?>"><?php echo get_phrase('add_ebook'); ?></a>
+					</li>
+					<li class="<?php if ($page_name == 'payment_history') echo 'active'; ?>">
+						<a href="<?php echo site_url('ebook_manager/payment_history'); ?>"><?php echo get_phrase('payment_history'); ?></a>
+					</li>
+					<li class="<?php if ($page_name == 'category') echo 'active'; ?>">
+						<a href="<?php echo site_url('ebook_manager/category'); ?>"><?php echo get_phrase('category'); ?></a>
 					</li>
 				</ul>
 			</li>

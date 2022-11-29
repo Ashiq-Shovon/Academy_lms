@@ -55,6 +55,15 @@
     </a>
   </li>
 
+  <?php if(addon_status('ebook')): ?>
+    <li class="all-category-devided m-0 p-0">
+      <a href="<?php echo site_url('ebook'); ?>" class="py-3" >
+        <span class="icon"><i class="fas fa-cubes"></i></span>
+        <span><?php echo site_phrase('ebooks'); ?></span>
+      </a>
+    </li>
+  <?php endif; ?>
+
   <?php if(addon_status('course_bundle')): ?>
     <li class="all-category-devided m-0 p-0">
       <a href="<?php echo site_url('course_bundles'); ?>" class="py-3" >

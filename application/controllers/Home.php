@@ -23,6 +23,8 @@ class Home extends CI_Controller
         $this->home();
     }
 
+    
+
     public function verification_code()
     {
         if (!$this->session->userdata('register_email')) {
@@ -119,6 +121,8 @@ class Home extends CI_Controller
         $page_data['selected_rating']     = $selected_rating;
         $this->load->view('frontend/' . get_frontend_settings('theme') . '/index', $page_data);
     }
+
+    
 
     public function set_layout_to_session()
     {

@@ -70,4 +70,13 @@ $route['blogs'] = "blog/blogs";
 $route['blogs/(:any)'] = "blog/blogs/$1";
 //End blog
 
+//ebook
+$route['ebook/ebook_details/(:any)/(:any)'] = "addons/ebook/ebook_details/$1/$2";
+$route['ebook'] = "addons/ebook/ebooks";
+$route['ebook_manager/all_ebooks'] = "addons/ebook_manager/all_ebooks";
+$route['ebook_manager/add_ebook'] = "addons/ebook_manager/add_ebook";
+$route['ebook_manager/payment_history'] = "addons/ebook_manager/payment_history";
+$route['ebook_manager/category'] = "addons/ebook_manager/category";
+//end ebook
+
 $route['translate_uri_dashes'] = FALSE;
